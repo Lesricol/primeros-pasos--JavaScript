@@ -54,11 +54,47 @@ function writeMessage(name, material, size, note) {
 writeMessage('Victor', 'leche bolivariana', 'grande', 'Bendiciones pa usted:*');
 console.clear();
 
-function suma(numberA, numberB, numberC) {
-  const media = (numberA + numberB + numberC) / 3;
-  return media;
+function addition(numberA, numberB, numberC) {
+  const average = (numberA + numberB + numberC) / 3;
+  return average;
 }
-const result = suma(10, 8, 8);
+const result = addition(10, 8, 8);
 console.log(result);
 
-function valor(discount, price) {}
+function value(discount, price) {
+  const result = price - price * (discount / 100);
+  return result;
+}
+const finalValue = value(50, 20);
+console.log(finalValue);
+
+function words(wordA, wordB) {
+  const combination = wordA + '-' + wordB;
+  return combination;
+}
+
+const combination = words('mama', 'ñema');
+console.log(combination);
+
+function getMeters(kilometers) {
+  return kilometers * 1000;
+}
+
+const totalMeters = getMeters(3);
+console.log(totalMeters);
+
+function getSeconds(hours) {
+  return hours * (3600 / 1);
+}
+
+const totalSeconds = getSeconds(2);
+console.log(totalSeconds);
+
+function getSpeedInMetersPerSecond(speed) {
+  const meters = getMeters(speed);
+  const seconds = getSeconds(1);
+
+  return meters / seconds;
+}
+const convertedSpeed = getSpeedInMetersPerSecond(70);
+console.log(convertedSpeed + ' m/s');
